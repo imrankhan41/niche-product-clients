@@ -5,6 +5,7 @@ import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import Header from './pages/Home/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
+import MainExplore from './pages/MainExplore/MainExplore/MainExplore';
 function App() {
   return (
     <div className="App">
@@ -14,8 +15,11 @@ function App() {
         <Route exact path="/">
         <Home></Home>
         </Route>
-        <Route path="home">
+        <Route path="/home">
         <Home></Home>
+        </Route>
+        <Route path="/explore">
+        <MainExplore></MainExplore>
         </Route>
         <Route path="*">
         <PageNotFound></PageNotFound>
