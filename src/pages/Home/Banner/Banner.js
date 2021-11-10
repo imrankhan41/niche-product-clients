@@ -3,7 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import "./Banner.css"
 const Banner = () => {
     return (
-        <div className="container banner">
+        <div className=" banner">
             <Carousel variant="dark">
                 <Carousel.Item>
                     <img
@@ -14,7 +14,7 @@ const Banner = () => {
                     <Carousel.Caption>
                     <h5 className="text-color first">Cycle Shop</h5>
                     <p className="text-color">Come to but your favourite one</p>
-                    <button className="banner-button bg-primary">Watch</button>
+                    <button className="banner-button bg-danger">Watch</button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -26,7 +26,7 @@ const Banner = () => {
                     <Carousel.Caption>
                     <h5 className="text-color first">Welcome to cycle World</h5>
                     <p className="text-color">Easy To SHop & Be The First One</p>
-                    <button className="banner-button bg-primary">Watch</button>
+                    <button className="banner-button bg-danger">Watch</button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -38,7 +38,7 @@ const Banner = () => {
                     <Carousel.Caption>
                     <h5 className="text-color">The Most Oldest Bike Collection</h5>
                     <p className="text-color first">Since 1900 ,We are The best</p>
-                    <button className=" bg-primary banner-button">Watch</button>
+                    <button className=" bg-danger banner-button">Watch</button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -50,7 +50,7 @@ const Banner = () => {
                     <Carousel.Caption>
                     <h5 className="text-color first">Keep Fit Your Body</h5>
                     <p className="text-color">Buy one Cycle , Buy One life</p>
-                    <button className=" bg-primary banner-button">Watch</button>
+                    <button className=" bg-danger banner-button">Watch</button>
                     </Carousel.Caption>
                     
                 </Carousel.Item>

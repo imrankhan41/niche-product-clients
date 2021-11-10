@@ -4,6 +4,7 @@ import Home from './pages/Home/Home/Home';
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import Header from './pages/Home/Header/Header';
+import Footer from './pages/Shared/Footer/Footer';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
         <PageNotFound></PageNotFound>
         </Route>
       </Switch>
+      <Footer></Footer>
       </BrowserRouter>
     </div>
   );
