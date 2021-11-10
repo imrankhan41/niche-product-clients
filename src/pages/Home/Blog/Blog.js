@@ -1,26 +1,30 @@
 import React from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
+import { Button, Card, CardGroup } from 'react-bootstrap';
 import "./Blog.css"
 const Blog = (props) => {
     const {name,subname,description}=props.blog
     return (
+        
         <div>
-            <CardGroup>
-            <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
+            <CardGroup >
+            <Card className="m-4 text-start">
+                <Card.Img variant="top" className="" src={description?.img1} />
                 <Card.Body>
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>{name.slice(0,20)}</Card.Title>
+                <Card.Title>{subname}</Card.Title>
                 <Card.Text>
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.
+                    {description?.description1.slice(0,140)}
                 </Card.Text>
                 </Card.Body>
-                <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <Card.Footer className="bg-danger">
+                <small className="text-white">Read More <i class="fas fa-chevron-right"></i></small>
                 </Card.Footer>
             </Card>
             </CardGroup>
+           
         </div>
+       
+        
     );
 };
 

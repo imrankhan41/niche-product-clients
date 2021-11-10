@@ -4,7 +4,7 @@ import "./Header.css"
 const Header = () => {
     return (
         <div >
-            <Navbar fixed="top" collapseOnSelect expand="lg" className=" bg-danger" >
+            <Navbar fixed="top" collapseOnSelect expand="lg" className="bg-danger" >
             <Container>
                 <Navbar.Brand href="#home" className="img-logo">CycleShop</Navbar.Brand>
                 <Navbar.Toggle />
