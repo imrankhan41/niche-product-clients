@@ -1,0 +1,14 @@
+.img-user{
+    width: 149px;
+    height: 149px; 
+    margin-bottom: 30px;
+    border-radius: 50%;
+}
+.card-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-size{
+    height: 400px;
+}

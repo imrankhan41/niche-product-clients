@@ -1,0 +1,10 @@
+.img-logo{
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: 700;
+}
+.backgroundNav{
+  
+    height: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
