@@ -4,7 +4,11 @@ import "./Blogs.css"
 
 const Blogs = () => {
     const [blogs,setBlogs]=useState([])
-    useEffect()
+    useEffect(()=>{
+        fetch("./blogs.json")
+        .then(res=>res.json())
+        .then(data=>setBlogs(data))
+    },[])
     return (
         <div>
             <h1 className="m-5 text-danger">Latest Blogs</h1>
