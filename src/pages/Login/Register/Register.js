@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Spinner } from 'react-bootstrap';
+import { Alert, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 import "./Register.css"
 const Register = () => {
     const [loginData,setLoginData]=useState({})
-    const {user, registerUser,isLoading}=useAuth()
+    const {user, registerUser,isLoading,autherror}=useAuth()
   const handleOnChange=e=>{
     const field =e.target.name;
     const value =e.target.value;
@@ -39,6 +39,16 @@ registerUser(loginData.email, loginData.password)
             </form>}
             {
                 isLoading && <Spinner animation="border" variant="danger" />
+            }
+            {
+                user?.email &&   <Alert className="text-primary ">
+                User Has Been Created Successfully
+              </Alert>
+            }
+            {
+                autherror &&   <Alert className="text-warning ">
+                {autherror}
+              </Alert>
             }
             </div>
            
