@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Nav } from 'react-bootstrap';
 import Blog from '../Blog/Blog';
 import "./Blogs.css"
 
@@ -21,7 +21,8 @@ const Blogs = () => {
             }
         </div>
         <div>
-             <Button className="px-5" variant="danger">Explore More Blogs</Button>
+        <Nav.Link href="/blogexplore"><Button className="px-5" variant="danger">Explore More Blogs</Button></Nav.Link>
+             
         </div>
         </div>
     );
