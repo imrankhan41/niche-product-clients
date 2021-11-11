@@ -1,20 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 import "./Register.css"
 const Register = () => {
-  
+  const {registerUser}=useAuth()
     return (
         <div className="login">
             
             <h1>Please Register</h1>
             <form >
-                
+            <input  className="login1" 
+            type="text" 
+            name="" 
+            id="" 
+            placeholder="Name" required/> <br/>
             <input  className="login1" 
             type="email" 
             name="" 
             id="" 
             placeholder="Email" required/> <br/>
+          
             
             <input className="login1" 
             type="password" 
