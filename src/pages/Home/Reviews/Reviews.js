@@ -9,7 +9,7 @@ const Reviews = () => {
         .then(data=>setReviews(data))
     },[])
     return (
-        <div>
+        <div id="reviews">
             <h1 className="text-danger">Reviews</h1>
             <div className="reviews">
                 {

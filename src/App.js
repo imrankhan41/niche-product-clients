@@ -8,6 +8,7 @@ import Footer from './pages/Shared/Footer/Footer';
 import MainExplore from './pages/MainExplore/MainExplore/MainExplore';
 import BlogExplore from './pages/Home/BlogExplore/BlogExplore/BlogExplore';
 import AddProduct from './pages/AddProduct/AddProduct';
+import ProductDetails from './pages/Home/ProductDetails/ProductDetails';
 function App() {
   return (
     <div className="App">
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/addaproduct">
         <AddProduct></AddProduct>
+        </Route>
+        <Route path="/products/:id">
+        <ProductDetails></ProductDetails>
         </Route>
         <Route path="*">
         <PageNotFound></PageNotFound>

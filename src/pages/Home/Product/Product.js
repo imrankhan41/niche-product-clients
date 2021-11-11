@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import "./Product.css"
 const Product = (props) => {
-    const{name,logo,price,img,subname,availability}=props.product
+    const{name,logo,price,img,subname,availability,id}=props.product
     return (
         <div className="m-2 ">
             <CardGroup>
@@ -16,11 +17,15 @@ const Product = (props) => {
                     <Card.Title>{name}</Card.Title>
                     <Card.Title >{subname}</Card.Title>
                     <Card.Title >{availability}</Card.Title>
+                    
                     </Card.Text>
                     </Card.Body>
                     <Card.Footer  className="bg-danger">
-                    <small className="text-white">Click & Collect and  Buy Now</small>
+                    <Link  to={`/products/${id}`}>
+                    <small className="text-white ">Click & Collect and  Buy Now</small>
+                    </Link>
                     </Card.Footer>
+                   
                 </Card> 
                 </CardGroup>
         </div>

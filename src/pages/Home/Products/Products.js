@@ -10,7 +10,7 @@ const Products = () => {
         .then(data =>setProducts(data.slice(0,6)))
     },[])
     return (
-        <div className="m-auto mt-5 row " >
+        <div id="products" className="m-auto mt-5 row " >
             <h1 className="fw-bolder text-danger">New Trendings</h1>
             <div className="cards">
             {

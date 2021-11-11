@@ -4,7 +4,7 @@ import "./AddProduct.css"
 const AddProduct = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
-        fetch('',{
+        fetch('http://localhost:5000/products',{
           method:'POST',
           headers:{
               'content-type':'application/json'
@@ -15,6 +15,7 @@ const AddProduct = () => {
       .then(data=>{
           if(data.insertedId){
               alert("Inserted successfully")
+              reset()
           }
           console.log(data)
       })

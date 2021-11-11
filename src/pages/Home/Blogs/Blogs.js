@@ -11,7 +11,7 @@ const Blogs = () => {
         .then(data=>setBlogs(data.slice(0,3)))
     },[])
     return (
-        <div>
+        <div id="blogs">
             <h1 className="m-5 text-danger">Latest Blogs</h1>
         <div className="cards">
             {
