@@ -9,10 +9,15 @@ import MainExplore from './pages/MainExplore/MainExplore/MainExplore';
 import BlogExplore from './pages/Home/BlogExplore/BlogExplore/BlogExplore';
 import AddProduct from './pages/AddProduct/AddProduct';
 import ProductDetails from './pages/Home/ProductDetails/ProductDetails';
+import Login from './pages/Login/Login/Login';
+import Register from './pages/Login/Register/Register';
+import AuthProvider from './context/AuthProvider/AuthProvider';
+
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+  <AuthProvider>
+    <BrowserRouter>
       <Header></Header>
       <Switch>
         <Route exact path="/">
@@ -30,6 +35,12 @@ function App() {
         <Route path="/addaproduct">
         <AddProduct></AddProduct>
         </Route>
+        <Route path="/login">
+        <Login></Login>
+        </Route>
+        <Route path="/register">
+        <Register></Register>
+        </Route>
         <Route path="/products/:id">
         <ProductDetails></ProductDetails>
         </Route>
@@ -39,6 +50,7 @@ function App() {
       </Switch>
       <Footer></Footer>
       </BrowserRouter>
+    </AuthProvider>
     </div>
   );
 }
