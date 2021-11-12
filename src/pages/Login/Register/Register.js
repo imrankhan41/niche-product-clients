@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Alert, Spinner } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link,useLocation,useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 import "./Register.css"
 const Register = () => {
+  const location =useLocation()
+  const history =useHistory()
     const [loginData,setLoginData]=useState({})
     const {user, registerUser,isLoading,autherror}=useAuth()
   const handleOnChange=e=>{
@@ -18,7 +20,7 @@ const Register = () => {
 const handleLoginSubmit=e=>{
 if(loginData.password!== loginData.password2){
 }
-registerUser(loginData.email, loginData.password)
+registerUser(loginData.email, loginData.password,loginData.name,history)
   e.preventDefault()
 }
     return (
