@@ -1,10 +1,9 @@
+
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
-
-import "./ProductDetails.css"
-const ProductDetails = () => {
+const ExploreDetails = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
         fetch('http://localhost:5000/orders',{
@@ -80,21 +79,9 @@ const ProductDetails = () => {
               
                </div>
                <hr />
-               {/* <div className="row booking text-secondary add1-user d-flex justify-content-center">
-                   <h1>Please Put Your Valuable Opinion:</h1>
-                   <div className="col-lg-6 col-md-8 col-sm-12 col-12">
-                   <form className="add-user" onSubmit={handleSubmit(onSubmit)}>
-                   <input {...register("name", { required: true, maxLength: 100 })} placeholder="Name" value={user?.displayName} />
-                    <input {...register("email")}  placeholder="Personal email" value={user?.email}/>
-                    <input type="number" {...register("rating")} placeholder="Rating"/>
-                    <textarea {...register("productDescription")} placeholder="Description"/>
-                    <input type="Submit"/>
-                    </form>
-                   </div>
-               </div> */}
            </div>
         </div>
     );
 };
 
-export default ProductDetails;
+export default ExploreDetails;

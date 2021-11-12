@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Explore = (props) => {
-    const{name,logo,price,img,subname,availability}=props.explore
+    const{name,logo,price,img,subname,availability,_id}=props.explore
     return (
         <div className="m-2 ">
             <CardGroup  className="mt-5">
@@ -19,7 +20,9 @@ const Explore = (props) => {
                     </Card.Text>
                     </Card.Body>
                     <Card.Footer  className="bg-danger">
-                    <small className="text-white">Click & Collect and  Buy Now</small>
+                    <Link className="text-decoration-none"  to={`/products/${_id}`}>
+                    <small className="text-white ">Click & Collect and  Buy Now</small>
+                    </Link>
                     </Card.Footer>
                 </Card> 
                 </CardGroup>

@@ -15,6 +15,8 @@ import AuthProvider from './context/AuthProvider/AuthProvider';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import DashBoard from './pages/DashBoard/DashBoard/DashBoard';
 import MakeAAdmin from './pages/DashBoard/MakeAAdmin/MakeAAdmin';
+import Orders from './pages/Orders/Orders/Orders';
+import Reviews from './pages/Home/Reviews/Reviews';
 
 function App() {
   return (
@@ -49,6 +51,12 @@ function App() {
         </Route>
         <Route path="/register">
         <Register></Register>
+        </Route>
+        <Route path="/orders">
+        <Orders></Orders>
+        </Route>
+        <Route path="/reviews">
+        <Reviews></Reviews>
         </Route>
         <Route path="/products/:productid">
         <ProductDetails></ProductDetails>
