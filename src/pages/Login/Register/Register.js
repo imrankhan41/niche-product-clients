@@ -41,14 +41,14 @@ registerUser(loginData.email, loginData.password)
                 isLoading && <Spinner animation="border" variant="danger" />
             }
             {
-                user?.email &&   <Alert className="text-primary ">
+                user?.email &&   <div className="text-center text-primary"> <i class="far fa-check-circle"></i>
                 User Has Been Created Successfully
-              </Alert>
+              </div>
             }
             {
-                autherror &&   <Alert className="text-warning ">
+                autherror &&   <div className="text-center text-warning"><i class="fas fa-backspace"></i>
                 {autherror}
-              </Alert>
+              </div>
             }
             </div>
            
