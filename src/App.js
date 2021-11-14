@@ -17,6 +17,7 @@ import DashBoard from './pages/DashBoard/DashBoard/DashBoard';
 import MakeAAdmin from './pages/DashBoard/MakeAAdmin/MakeAAdmin';
 import Orders from './pages/Orders/Orders/Orders';
 import Reviews from './pages/Home/Reviews/Reviews';
+import BlogDetails from './pages/Home/BlogDeatils/BlogDetails';
 
 function App() {
   return (
@@ -60,6 +61,9 @@ function App() {
         </Route>
         <Route path="/products/:productid">
         <ProductDetails></ProductDetails>
+        </Route>
+        <Route path="/blogs/:blogId">
+        <BlogDetails></BlogDetails>
         </Route>
         <Route path="*">
         <PageNotFound></PageNotFound>

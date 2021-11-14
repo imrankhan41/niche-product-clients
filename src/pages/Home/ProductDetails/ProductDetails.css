@@ -9,7 +9,8 @@
    justify-content: center;
    align-items: center;
  }
- .add1-user form input, textarea{
-   width: 40%;
+ form input,form textarea{
+   width: 100%;
    margin-bottom: 10px;
+   padding: 5px;
  }

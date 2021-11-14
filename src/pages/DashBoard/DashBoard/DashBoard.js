@@ -13,6 +13,7 @@ import MakeAAdmin from '../MakeAAdmin/MakeAAdmin';
 import AddProduct from '../../AddProduct/AddProduct';
 import MyOrder from '../MyOrder/MyOrder';
 import Reviews from '../ReviewMaking/ReviewMaking';
+import AddBlog from '../AddBlog/AddBlog';
 const DashBoard = () => {
     const { path, url } = useRouteMatch();
     const {user,logOut}=useAuth()
@@ -27,17 +28,21 @@ const DashBoard = () => {
                     <li>
                     <Link className="text-decoration-none" as ={HashLink} to={`${url}/pay`}>Pay</Link>
                     </li>
-                    <li>
-                    <Link className="text-decoration-none" as ={HashLink} to={`${url}/makeaadmin`}>MakeAdmin</Link>
-                    </li>
+                  
                     <li>
                     <Link className="text-decoration-none" as ={HashLink} to={`${url}/myorder`}>My Orders</Link>
+                    </li>
+                    <li>
+                    <Link className="text-decoration-none" as ={HashLink} to={`${url}/reviews`}>Reviews</Link>
                     </li>
                     <li>
                     <Link className="text-decoration-none" as ={HashLink} to={`${url}/addproduct`}>Add Product</Link>
                     </li>
                     <li>
-                    <Link className="text-decoration-none" as ={HashLink} to={`${url}/reviews`}>Reviews</Link>
+                    <Link className="text-decoration-none" as ={HashLink} to={`${url}/addblog`}>Add Blog</Link>
+                    </li>
+                    <li>
+                    <Link className="text-decoration-none" as ={HashLink} to={`${url}/makeaadmin`}>MakeAdmin</Link>
                     </li>
                     {
                    user?.email &&
@@ -60,6 +65,9 @@ const DashBoard = () => {
                   </Route>
                     <Route path={`${path}/reviews`}>
                        <Reviews></Reviews>
+                  </Route>
+                    <Route path={`${path}/addblog`}>
+                       <AddBlog></AddBlog>
                   </Route>
                 </Switch>
             </div>
