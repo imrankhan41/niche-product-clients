@@ -23,6 +23,19 @@ const DashBoard = () => {
             <h1 className="pt-5 bg-primary">DashBoard</h1>
             <div className="dashboard-style" style={{textAlign:"left"}}>
                 <ul className="mx-5">
+                    {(admin)?
+                         <div>
+                         <li>
+                         <Link className="text-decoration-none" as ={HashLink} to={`${url}/addproduct`}>Add Product</Link>
+                         </li>
+                         <li>
+                         <Link className="text-decoration-none" as ={HashLink} to={`${url}/addblog`}>Add Blog</Link>
+                         </li>
+                         <li>
+                         <Link className="text-decoration-none" as ={HashLink} to={`${url}/makeaadmin`}>MakeAdmin</Link>
+                         </li>
+                        </div>:
+                    <div>
                     <li>
                     <Link className="text-decoration-none"  to="/home">Home</Link>
                     </li>
@@ -36,20 +49,10 @@ const DashBoard = () => {
                     <li>
                     <Link className="text-decoration-none" as ={HashLink} to={`${url}/reviews`}>Reviews</Link>
                     </li>
+                    </div>
                     
-                        {
-                            admin && <div>
-                                     <li>
-                    <Link className="text-decoration-none" as ={HashLink} to={`${url}/addproduct`}>Add Product</Link>
-                    </li>
-                    <li>
-                    <Link className="text-decoration-none" as ={HashLink} to={`${url}/addblog`}>Add Blog</Link>
-                    </li>
-                    <li>
-                    <Link className="text-decoration-none" as ={HashLink} to={`${url}/makeaadmin`}>MakeAdmin</Link>
-                    </li>
-                            </div>
-                        }
+               }
+                        
                    
                     {
                    user?.email &&

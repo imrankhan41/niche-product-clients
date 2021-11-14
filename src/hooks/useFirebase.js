@@ -40,9 +40,10 @@ const useFirebase =()=>{
             .then((result) => {  
                 const user = result.user;
                 saveUser(user.email,user.displayName,'PUT')
-                setAutherror('')
                 const destination =location?.state?.from || "/";
                 history.replace(destination)
+                setAutherror('')
+              
             }).catch((error) => {
                 setAutherror(error.message)
             })

@@ -8,7 +8,7 @@ const Register = () => {
   const location =useLocation()
   const history =useHistory()
     const [loginData,setLoginData]=useState({})
-    const {user, registerUser,isLoading,autherror}=useAuth()
+    const {user, registerUser,isLoading,autherror,signinUsingGoogle}=useAuth()
   const handleOnChange=e=>{
     const field =e.target.name;
     const value =e.target.value;
@@ -37,7 +37,7 @@ registerUser(loginData.email, loginData.password,loginData.name,history)
             <button type='submit' className="login1 button">Register</button> <br />
             <Link className="text-decoration-none" to="/login">Already Registered? Try Login</Link>
             <div>Or</div>
-            <button  className="login1 button">Google Log in</button>
+            <button onClick={signinUsingGoogle}  className="login1 button">Google Log in</button>
             </form>}
             {
                 isLoading && <Spinner animation="border" variant="danger" />
