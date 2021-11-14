@@ -17,7 +17,7 @@ import AddBlog from '../AddBlog/AddBlog';
 import Pay from '../Pay/Pay';
 const DashBoard = () => {
     const { path, url } = useRouteMatch();
-    const {user,logOut}=useAuth()
+    const {admin,user,logOut}=useAuth()
     return (
         <div className="mt-5 dashboard">
             <h1 className="pt-5 bg-primary">DashBoard</h1>
@@ -36,7 +36,10 @@ const DashBoard = () => {
                     <li>
                     <Link className="text-decoration-none" as ={HashLink} to={`${url}/reviews`}>Reviews</Link>
                     </li>
-                    <li>
+                    
+                        {
+                            admin && <div>
+                                     <li>
                     <Link className="text-decoration-none" as ={HashLink} to={`${url}/addproduct`}>Add Product</Link>
                     </li>
                     <li>
@@ -45,6 +48,9 @@ const DashBoard = () => {
                     <li>
                     <Link className="text-decoration-none" as ={HashLink} to={`${url}/makeaadmin`}>MakeAdmin</Link>
                     </li>
+                            </div>
+                        }
+                   
                     {
                    user?.email &&
                      <Button onClick={logOut} className="bg-light text-dark">Logout</Button>
