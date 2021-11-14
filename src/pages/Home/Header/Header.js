@@ -30,7 +30,7 @@ const Header = () => {
                 }
                 </Nav>
                 <Navbar.Text>
-                    Hi: <a href="#login">{user.email}</a>
+                    Hi: <a href="#login">{user.displayName}</a>
                 </Navbar.Text>
                 </Navbar.Collapse>
             </Container>

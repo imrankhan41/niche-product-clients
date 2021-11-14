@@ -14,6 +14,7 @@ import AddProduct from '../../AddProduct/AddProduct';
 import MyOrder from '../MyOrder/MyOrder';
 import Reviews from '../ReviewMaking/ReviewMaking';
 import AddBlog from '../AddBlog/AddBlog';
+import Pay from '../Pay/Pay';
 const DashBoard = () => {
     const { path, url } = useRouteMatch();
     const {user,logOut}=useAuth()
@@ -53,6 +54,9 @@ const DashBoard = () => {
                 <Switch>
                     <Route exact path={`${path}`}>
                         <h1>Welcome to DashBoard</h1>
+                    </Route>
+                    <Route path={`${path}/pay`}>
+                        <Pay></Pay>
                     </Route>
                     <Route path={`${path}/makeaadmin`}>
                        <MakeAAdmin></MakeAAdmin>

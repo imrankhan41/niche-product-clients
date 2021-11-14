@@ -24,10 +24,12 @@ const AddBlog = () => {
   }
     return (
         <div>
-        <h1>Please Add Blog:</h1>
+        <h4 className="text-primary">Please Add Blog <br /> Dear Mr. {user?.displayName} By Using Your Email :{user?.email}</h4>
+      
         <div className="row d-flex justify-content-center">
-               
+              
                <div className="col-lg-6 col-md-8 col-sm-12 col-12">
+              
                <form className="add-user" onSubmit={handleSubmit(onSubmit)}>
                 <input  {...register("name")} placeholder="Name"/>
                 <input  {...register("subname")} placeholder="Subname"/>
