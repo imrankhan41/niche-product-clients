@@ -3,7 +3,7 @@ import "./MakeAAdmin.css"
 const MakeAAdmin = () => {
     return (
         <div>
-            <h1>Nake A Admin</h1>
+            <h1>Please Make An Admin</h1>
         </div>
     );
 };

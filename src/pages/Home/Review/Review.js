@@ -3,18 +3,18 @@ import { Card, CardGroup } from 'react-bootstrap';
 import Rating from 'react-rating';
 import "./Review.css"
 const Review = (props) => {
-    const {img,comments,rating,email}=props.review
+    const {peronimg,description,rating,email}=props.review
     return (
         <div>
             <CardGroup >
             <Card className="m-2 card-item card-size">
               
-                <Card.Img variant="top" className="img-user" src={img} />
+                <Card.Img variant="top" className="img-user" src={peronimg} />
                 <Card.Title>{email}</Card.Title>
                 <Card.Body>
                 
                 <Card.Text>
-                   {comments}
+                   {description}
                 </Card.Text>
                 </Card.Body>
                 <Card.Footer className="bg-danger w-100">

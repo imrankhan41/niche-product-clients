@@ -23,9 +23,9 @@ const Header = () => {
               
                 {
                 
-                    user?.email?  
-                    //<Nav.Link as ={HashLink} to="/dashboard">DashBoard</Nav.Link>:
-                    <Button onClick={logOut} className="bg-light text-dark">Logout</Button>:
+                    user?.email?  <div>
+                    <Nav.Link as ={HashLink} to="/dashboard">DashBoard</Nav.Link>
+                    </div>:
                     <Nav.Link as ={HashLink} to="/login">Login</Nav.Link>
                 }
                 </Nav>
