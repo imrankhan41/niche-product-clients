@@ -15,6 +15,7 @@ const useFirebase =()=>{
             setAutherror('')
             const newUser ={email,displayName:name}
             setUser(newUser);
+            saveUser(email,name)
             updateProfile(auth.currentUser, {
                 displayName: name
               })
@@ -69,7 +70,20 @@ const useFirebase =()=>{
           });
           return ()=>unsubscribed;
        },[])
+const saveUser =(email,displayName)=>{
+    const user ={email,displayName};
+    fetch('')
+    fetch('http://localhost:5000/users',{
+          method:'POST',
+          headers:{
+              'content-type':'application/json'
+          },
+          body:JSON.stringify(user)
+      })
+      .then()
+    
 
+}
        
        const logOut=()=>{
         setIsLoading(true)
