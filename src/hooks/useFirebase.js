@@ -83,7 +83,9 @@ const saveUser =(email,displayName,method)=>{
           },
           body:JSON.stringify(user)
       })
-      .then()
+      .then(res=>res.json())
+      .then(data=>
+        console.log(data))
     
 
 }
