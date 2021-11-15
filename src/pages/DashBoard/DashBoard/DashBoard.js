@@ -15,6 +15,9 @@ import MyOrder from '../MyOrder/MyOrder';
 import Reviews from '../ReviewMaking/ReviewMaking';
 import AddBlog from '../AddBlog/AddBlog';
 import Pay from '../Pay/Pay';
+import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
+import EditUser from '../EditUser/EditUser';
+import OrderDetails from '../OrderDeatils/OrderDetails';
 const DashBoard = () => {
     const { path, url } = useRouteMatch();
     const {admin,user,logOut}=useAuth()
@@ -31,6 +34,9 @@ const DashBoard = () => {
                          <li>
                          <Link className="text-decoration-none" as ={HashLink} to={`${url}/addblog`}>Add Blog</Link>
                          </li>
+                         <li>
+                    <Link className="text-decoration-none" as ={HashLink} to={`${url}/manageallorder`}>Manage All Orders</Link>
+                    </li>
                          <li>
                          <Link className="text-decoration-none" as ={HashLink} to={`${url}/makeaadmin`}>MakeAdmin</Link>
                          </li>
@@ -82,6 +88,15 @@ const DashBoard = () => {
                     <Route path={`${path}/addblog`}>
                        <AddBlog></AddBlog>
                   </Route>
+                    <Route path={`${path}/manageallorder`}>
+                       <ManageAllOrders></ManageAllOrders>
+                  </Route>
+                  <Route path={`${path}/edituser/:id`}>
+                    <EditUser></EditUser>
+                </Route>
+                <Route path={`${path}/orders/:id`}>
+                <OrderDetails></OrderDetails>
+                </Route>
                 </Switch>
             </div>
             

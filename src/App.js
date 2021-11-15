@@ -18,6 +18,8 @@ import MakeAAdmin from './pages/DashBoard/MakeAAdmin/MakeAAdmin';
 import Orders from './pages/Orders/Orders/Orders';
 import Reviews from './pages/Home/Reviews/Reviews';
 import BlogDetails from './pages/Home/BlogDeatils/BlogDetails';
+import EditUser from './pages/DashBoard/EditUser/EditUser';
+import OrderDetails from './pages/DashBoard/OrderDeatils/OrderDetails';
 
 function App() {
   return (
@@ -64,6 +66,12 @@ function App() {
         </Route>
         <Route path="/blogs/:blogId">
         <BlogDetails></BlogDetails>
+        </Route>
+        <PrivateRoute path="/edituser/:id">
+         <EditUser></EditUser>
+       </PrivateRoute>
+        <Route path="/orders/:id">
+        <OrderDetails></OrderDetails>
         </Route>
         <Route path="*">
         <PageNotFound></PageNotFound>

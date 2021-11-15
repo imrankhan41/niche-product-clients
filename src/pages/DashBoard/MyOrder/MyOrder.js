@@ -1,10 +1,83 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 const MyOrder = () => {
+    const {email}=useAuth()
+    const [user,setUser]=useState([])
+    const [click,setClick]=useState(false)
+    useEffect(()=>{
+        fetch('https://enigmatic-bastion-18464.herokuapp.com/orders')
+        .then(res=>res.json())
+        .then(data=>
+            {if(data.deletedCount>0){
+               const email =user?.email
+                alert("deleted successfully")
+                const reamainingUser =user.filter(userr=>userr._id!==id)
+                setUser(reamainingUser)}
+            setUser(data)})
+    },[])
+    const handleDeleteUser =id=>{
+        
+        const proceed=window.confirm("Are you sure for deleting it?")
+        if(proceed){
+         const url=`https://enigmatic-bastion-18464.herokuapp.com/orders/${id}`
+         fetch(url,{
+             method:"DELETE"
+         })
+         .then(res=>res.json())
+         .then(data=>{
+             if(data.deletedCount>0){
+                 alert("deleted successfully")
+                 const reamainingUser =user.filter(userr=>userr._id!==id)
+                 setUser(reamainingUser)}
+             })
+        }
+       
+        }
+        const toggleIn=e=>{
+            setClick(e.target.checked)
+
+            
+        }
     return (
-        <div>
-            <h1>My Orders</h1>
-        </div>
+        <div className="My-orders">
+        <h1>My Orders</h1>
+        <div className="table-responsive">
+
+     
+        <table className="table mx-3">
+            <thead className="bg-secondary ">
+                <tr>
+
+                <th scope="col">#</th>
+                <th scope="col">Email</th>
+                <th scope="col">productName</th>
+                <th scope="col">phone number</th>
+                <th scope="col">Address</th>
+                <th scope="col">Action</th>
+               
+                </tr>
+            </thead>
+            <tbody>
+                {user.map((user,index)=>(
+                     <tr>
+                      <td>{index+1}</td> 
+                     <td>{user.email}</td>
+                     <td>{user.productName}</td>
+                     <td>{user.phoneNumber}</td>
+                     <td>{user.address}</td>
+                     <td>
+                         <Link className="m-1 btn btn-primary" to={`/orders/${user._id}`}>View</Link>
+                         <Link className="m-2 btn btn-outline-primary" to={`/edituser/${user._id}`}>Edit</Link>
+                         <button className="btn btn-danger" onClick={()=>handleDeleteUser(user._id)}>Delete</button>
+                         
+                         </td>
+                     </tr>
+                ))}
+            </tbody>
+            </table>
+            </div>
+    </div>
     );
 };
 
