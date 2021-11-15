@@ -6,7 +6,7 @@ import useAuth from '../../../hooks/useAuth';
 const ExploreDetails = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
-        fetch('http://localhost:5000/orders',{
+        fetch('https://enigmatic-bastion-18464.herokuapp.com/orders',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

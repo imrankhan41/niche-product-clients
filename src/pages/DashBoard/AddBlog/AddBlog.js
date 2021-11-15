@@ -6,7 +6,7 @@ const AddBlog = () => {
     const {user}=useAuth()
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
-        fetch('http://localhost:5000/blogs',{
+        fetch('https://enigmatic-bastion-18464.herokuapp.com/blogs',{
           method:'POST',
           headers:{
               'content-type':'application/json'

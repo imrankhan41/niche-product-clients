@@ -29,7 +29,7 @@ const ProductDetails = () => {
     const [details,setDetails]=useState();
     const {productid}=useParams()
     useEffect(()=>{
-        fetch(`http://localhost:5000/products/${ productid}`)
+        fetch(`https://enigmatic-bastion-18464.herokuapp.com/products/${ productid}`)
         .then(res=>res.json())
         .then(data =>setDetails(data))
     },[])

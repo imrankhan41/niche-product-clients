@@ -6,7 +6,7 @@ const ReviewMaking = () => {
     const {user}=useAuth()
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
-        fetch('http://localhost:5000/reviews',{
+        fetch('https://enigmatic-bastion-18464.herokuapp.com/reviews',{
           method:'POST',
           headers:{
               'content-type':'application/json'
