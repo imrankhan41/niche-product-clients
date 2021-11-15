@@ -2,19 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 const MyOrder = () => {
-    const {email}=useAuth()
-    const [user,setUser]=useState([])
+    const {user}=useAuth()
+    const [usersa,setUsersa]=useState([])
     const [click,setClick]=useState(false)
     useEffect(()=>{
-        fetch('https://enigmatic-bastion-18464.herokuapp.com/orders')
+        fetch(`https://enigmatic-bastion-18464.herokuapp.com/orders?email=${user.email}`)
         .then(res=>res.json())
         .then(data=>
-            {if(data.deletedCount>0){
-               const email =user?.email
-                alert("deleted successfully")
-                const reamainingUser =user.filter(userr=>userr._id!==id)
-                setUser(reamainingUser)}
-            setUser(data)})
+            setUsersa(data))
     },[])
     const handleDeleteUser =id=>{
         
@@ -28,8 +23,8 @@ const MyOrder = () => {
          .then(data=>{
              if(data.deletedCount>0){
                  alert("deleted successfully")
-                 const reamainingUser =user.filter(userr=>userr._id!==id)
-                 setUser(reamainingUser)}
+                 const reamainingUser =usersa.filter(userr=>userr._id!==id)
+                 setUsersa(reamainingUser)}
              })
         }
        
@@ -59,17 +54,17 @@ const MyOrder = () => {
                 </tr>
             </thead>
             <tbody>
-                {user.map((user,index)=>(
+                {usersa.map((users,index)=>(
                      <tr>
                       <td>{index+1}</td> 
-                     <td>{user.email}</td>
-                     <td>{user.productName}</td>
-                     <td>{user.phoneNumber}</td>
-                     <td>{user.address}</td>
+                     <td>{users.email}</td>
+                     <td>{users.productName}</td>
+                     <td>{users.phoneNumber}</td>
+                     <td>{users.address}</td>
                      <td>
-                         <Link className="m-1 btn btn-primary" to={`/orders/${user._id}`}>View</Link>
-                         <Link className="m-2 btn btn-outline-primary" to={`/edituser/${user._id}`}>Edit</Link>
-                         <button className="btn btn-danger" onClick={()=>handleDeleteUser(user._id)}>Delete</button>
+                         <Link className="m-1 btn btn-primary" to={`/orders/${users._id}`}>View</Link>
+                         <Link className="m-2 btn btn-outline-primary" to={`/edituser/${users._id}`}>Edit</Link>
+                         <button className="btn btn-danger" onClick={()=>handleDeleteUser(users._id)}>Delete</button>
                          
                          </td>
                      </tr>

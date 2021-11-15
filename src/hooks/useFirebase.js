@@ -78,7 +78,7 @@ const useFirebase =()=>{
 const saveUser =(email,displayName,method)=>{
     const user ={email,displayName};
     fetch('')
-    fetch('http://localhost:5000/users',{
+    fetch('https://enigmatic-bastion-18464.herokuapp.com/users',{
           method:method,
           headers:{
               'content-type':'application/json'
@@ -92,7 +92,7 @@ const saveUser =(email,displayName,method)=>{
 
 }
  useEffect(()=>{
-     fetch(`http://localhost:5000/users/${user.email}`)
+     fetch(`https://enigmatic-bastion-18464.herokuapp.com/users/${user.email}`)
      .then(res=>res.json())
      .then(data=>setAdmin(data.admin))
  },[user.email])
@@ -118,70 +118,3 @@ const saveUser =(email,displayName,method)=>{
 
 }
 export default useFirebase;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { getAuth, signInWithPopup, GoogleAuthProvider,signOut,onAuthStateChanged } from "firebase/auth";
-// import { useEffect, useState } from "react";
-// import initializeAuthentication from "../pages/Firebase/firebase.init";
-
-
-// initializeAuthentication();
-// const useFirebase =()=>{
-//     const [users,setUsers]=useState({});
-//     const [isLoading,setIsLoading]=useState(true);
-//     const auth = getAuth();
-    
-//     const signInUsingGoggle =()=>{
-//         const goggleProvider = new GoogleAuthProvider();
-//         return signInWithPopup(auth, goggleProvider);
-       
-//     };
-//     useEffect(()=>{
-//         const unsubscribded= onAuthStateChanged(auth, user => {
-
-//             if(user){
-//                 setUsers(user)
-//             }
-//             else{
-//                 setUsers({})
-//             }
-//             setIsLoading(false);
-//         });
-//         return ()=>unsubscribded;
-//     },[]);
-//     const logOut=()=>{
-//         setIsLoading(true)
-//         signOut(auth)
-//         .then(() => {
-            
-//           })
-//           .finally(()=>setIsLoading(false));
-//     }
-
-//     return{
-//         users,
-//         logOut,
-//         signInUsingGoggle,
-//         isLoading,
-//         setIsLoading
-//     }
-
-    
-// }
-// export default useFirebase;
