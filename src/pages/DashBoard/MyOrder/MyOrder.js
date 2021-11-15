@@ -62,7 +62,7 @@ const MyOrder = () => {
                      <td>{users.phoneNumber}</td>
                      <td>{users.address}</td>
                      <td>
-                         <Link className="m-1 btn btn-primary" to={`/orders/${users._id}`}>View</Link>
+                         
                          <Link className="m-2 btn btn-outline-primary" to={`/edituser/${users._id}`}>Edit</Link>
                          <button className="btn btn-danger" onClick={()=>handleDeleteUser(users._id)}>Delete</button>
                          
