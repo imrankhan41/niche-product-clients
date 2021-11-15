@@ -54,16 +54,12 @@ const ProductDetails = () => {
                 <p> Availability: {details?.availability}</p>
                  <h1>Specification:</h1> <br />
                  <p>{details?.specifications}</p>
-
-
                </div>
                <div className="col-lg-5 col-md-6 col-sm-12 col-12 booking text-secondary add1-user">
                <img className="img-fluid" src={details?.logo} alt="" />
                <h1>{details?.name}</h1>
                <p>{details?.subname}</p>
                <h4>Now ${details?.price}</h4>
-                
-                 {/* <img src={users?.photoURL} alt="" srcset="" /> */}
                   <form className="add-user" onSubmit={handleSubmit(onSubmit)}>
                     <input {...register("name", { required: true, maxLength: 100 })} placeholder="Name" value={user?.displayName} />
                     <input {...register("email")}  placeholder="Personal email" value={user?.email}/>
@@ -74,13 +70,9 @@ const ProductDetails = () => {
                     <input {...register("productImg")}  placeholder="Product Photo" value={details?.img}/>
                     <input type="number" {...register("productPrice")} placeholder="Price"  />
                     <textarea {...register("productDescription")} placeholder="Description" value={details?.description}/>
-                        <input type="Submit"/>
-                        
+                        <input type="Submit"/> 
                 </form>
-              
                </div>
-            
-               
            </div>
         </div>
     );
