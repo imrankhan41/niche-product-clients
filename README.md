@@ -5,7 +5,7 @@ Click the link to see website[Link to Firebase ](https://food-delivery-website-7
 - This website has made for the people who want to buy in different item's food
 - You can watch how much cost  you have to spend in food everyday
 - Firebase has been used for authentication and hosting
-- Tried to make the best website of food delivery to deliver food
+- Tried to make the best website of food delivery to deliver cycle
 - You can also be sure that here mongodb,react hook,axios also used for making this website
-
+- DashBoard and admin has been made here
 <!-- ?edit of readme file -->

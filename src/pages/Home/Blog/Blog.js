@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import "./Blog.css"
 const Blog = (props) => {
     const {name,subname,description1,img1,_id}=props.blog
+    const click =()=>{
+        alert("click explore more blog button to show  details blog post")
+    }
     return (
         
         <div>
@@ -21,7 +24,7 @@ const Blog = (props) => {
                 </Card.Body>
                 <Card.Footer className="bg-danger">
                
-                    <small className="text-white ">    Read More <i class="fas fa-chevron-right"></i></small>
+                    <small onClick={click} className="text-white ">Read More <i class="fas fa-chevron-right"></i></small>
                  
                 </Card.Footer>
             </Card>
