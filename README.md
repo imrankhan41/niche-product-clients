@@ -1,5 +1,5 @@
 # Food Delivery Website 
-Click the link to see website[Link to Firebase ](https://food-delivery-website-7e5fa.firebaseapp.com/)
+Click the link to see website[Link to Firebase ](https://niche-website-6e541.firebaseapp.com/)
 
 - Using Javascript react,pure css,JSX for making this website,Github used for code repository &
 - This website has made for the people who want to buy in different item's food
