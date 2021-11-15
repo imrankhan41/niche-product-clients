@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const BlogExploring = (props) => {
-    const {name,subname,description1,img1}=props.blogExploring
+    const {name,subname,description1,img1,_id}=props.blogExploring
     return (
         <div>
             <CardGroup >
@@ -16,7 +17,9 @@ const BlogExploring = (props) => {
                 </Card.Text>
                 </Card.Body>
                 <Card.Footer className="bg-danger">
-                <small className="text-white">Read More <i class="fas fa-chevron-right"></i></small>
+                <Link className="text-decoration-none"  to={`/blogs/${_id}`}>
+                    <small className="text-white ">    Read More <i class="fas fa-chevron-right"></i></small>
+                    </Link>
                 </Card.Footer>
             </Card>
             </CardGroup>

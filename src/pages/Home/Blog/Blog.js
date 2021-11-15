@@ -20,9 +20,9 @@ const Blog = (props) => {
             
                 </Card.Body>
                 <Card.Footer className="bg-danger">
-                <Link className="text-decoration-none"  to={`/blogs/${_id}`}>
+               
                     <small className="text-white ">    Read More <i class="fas fa-chevron-right"></i></small>
-                    </Link>
+                 
                 </Card.Footer>
             </Card>
             </CardGroup>

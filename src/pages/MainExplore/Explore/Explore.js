@@ -20,7 +20,7 @@ const Explore = (props) => {
                     </Card.Text>
                     </Card.Body>
                     <Card.Footer  className="bg-danger">
-                    <Link className="text-decoration-none"  to={`/products/${_id}`}>
+                    <Link className="text-decoration-none"  >
                     <small className="text-white ">Click & Collect and  Buy Now</small>
                     </Link>
                     </Card.Footer>
