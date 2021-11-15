@@ -39,7 +39,7 @@ const ProductDetails = () => {
     return (
         <div className="mt-5">
            <div className="row">
-               <div className="p-5 text-start border-end col-lg-7 col-md-6 col-sm-12 col-12">
+               <div className="p-5 text-start border-end col-lg-6 col-md-6 col-sm-12 col-12">
                    <img className="border border-secondary img-fluid" src={details?.img} alt="" />
                    <h2 className="mt-3 ">Description :</h2>
                    <p className=" text-start">{details?.description}</p>
@@ -55,7 +55,7 @@ const ProductDetails = () => {
                  <h1>Specification:</h1> <br />
                  <p>{details?.specifications}</p>
                </div>
-               <div className="col-lg-5 col-md-6 col-sm-12 col-12 booking text-secondary add1-user">
+               <div className="col-lg-6 col-md-6 col-sm-12 col-12 booking text-secondary add1-user">
                <img className="img-fluid" src={details?.logo} alt="" />
                <h1>{details?.name}</h1>
                <p>{details?.subname}</p>

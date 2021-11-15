@@ -8,8 +8,11 @@ const MyOrder = () => {
     useEffect(()=>{
         fetch(`https://enigmatic-bastion-18464.herokuapp.com/orders?email=${user.email}`)
         .then(res=>res.json())
-        .then(data=>
-            setUsersa(data))
+        .then(data=>{
+            if(user.email){
+                const reamainingUser =data.filter(userr=>userr.email===user.email)
+                setUsersa(reamainingUser)}
+        })
     },[])
     const handleDeleteUser =id=>{
         
